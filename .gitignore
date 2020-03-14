@@ -1,0 +1,9 @@
+
+a.out
+comp
+lex.yy.c
+lex.yy.o
+y.output
+y.tab.o
+y.tab.h
+y.tab.c
