@@ -15,7 +15,7 @@
 "="                                      		                      return(tEQ);
 "+"                                      		                      return(tADD);
 "-"                                      		                      return(tSUB);
-[0-9]*                                   		                      return(tNB);
+[0-9]*                                   		                      yylval.nb=atof(yytext) ; return(tNB);
 [0-9]*("."[0-9]*)                        		                      return(tREAL);
 "*"                                      		                      return(tMUL);
 "^"                                      		                      return(tPOW);
@@ -26,7 +26,7 @@
 "{"                                      		                      return(tACCo);
 "}"                                      		                      return(tACCf);
 "NULL"                                   		                      return(tNULL);
-([a-zA-Z]|_)(([0-9]|[a-zA-Z])|_)*                                 return(tVAR);
+([a-zA-Z]|_)(([0-9]|[a-zA-Z])|_)*                                 yylval.var=strdup(yytext) ; return(tVAR);
 
 %%
 

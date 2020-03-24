@@ -2,6 +2,7 @@
     #include <stdlib.h>
     #include <stdio.h>
     #include <string.h>
+
     int yydebug=1;
     extern int yylex();
     int yywrap(void) {};
@@ -58,9 +59,10 @@
     	fprintf(inputFile,"%d %d %d %d\n", ope_cod, ret,op1, op2);
     }
 %}
-
+%union        {int nb; char * var;}
 %token        tMAIN tFIN tCONST tVOID tINT tCHAR tFLOAT tPRINTF tEQ tADD tSUB tMUL tDIV tVIRG tPTvirg tPARo tPARf tACCo tACCf tVAR tNULL tREAL tNOM tNB
-
+%token        <nb>  tNB
+%token        <var> tVAR
 %left tADD tSUB
 %left tDIV tMUL
 %right tPOW
