@@ -2,31 +2,31 @@
     #include "y.tab.h"
 %}
 %%
-" "                                      
-"   "  
-"\n"                                                                       
-"main"                                   return(tMAIN); 
-"const"                                  return(tCONST); 
-"void"                                   return(tVOID); 
-"int"                                    return(tINT); 
-"char"                                   return(tCHAR); 
-"float"                                  return(tFLOAT); 
-"printf"                                 return(tPRINTF); 
-"="                                      return(tEQ); 
-"+"                                      return(tADD); 
-"-"                                      return(tSUB); 
-[0-9]*                                   return(tNB); 
-[0-9]*("."[0-9]*)                        return(tREAL); 
-"*"                                      return(tMUL); 
-"^"                                      return(tPOW);   
-"/"                                      return(tDIV);
-";"                                      return(tPTvirg); 
-"("                                      return(tPARo); 
-")"                                      return(tPARf); 
-"{"                                      return(tACCo); 
-"}"                                      return(tACCf); 
-"NULL"                                   return(tNULL); 
-([a-zA-Z]|_)(([0-9]|[a-zA-Z])|_)*        return(tVAR); 
+" "
+"   "
+"\n"
+"main"                                   		                      return(tMAIN);
+"const"                                  		                      return(tCONST);
+"void"                                   		                      return(tVOID);
+"int"                                    		                      return(tINT);
+"char"                                   		                      return(tCHAR);
+"float"                                  		                      return(tFLOAT);
+"printf"                                 		                      return(tPRINTF);
+"="                                      		                      return(tEQ);
+"+"                                      		                      return(tADD);
+"-"                                      		                      return(tSUB);
+[0-9]*                                   		                      return(tNB);
+[0-9]*("."[0-9]*)                        		                      return(tREAL);
+"*"                                      		                      return(tMUL);
+"^"                                      		                      return(tPOW);
+"/"                                      		                      return(tDIV);
+";"                                      		                      return(tPTvirg);
+"("                                      		                      return(tPARo);
+")"                                      		                      return(tPARf);
+"{"                                      		                      return(tACCo);
+"}"                                      		                      return(tACCf);
+"NULL"                                   		                      return(tNULL);
+([a-zA-Z]|_)(([0-9]|[a-zA-Z])|_)*                                 return(tVAR);
 
 %%
 

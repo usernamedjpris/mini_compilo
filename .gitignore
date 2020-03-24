@@ -1,9 +1,9 @@
-
 a.out
+asm.txt
 comp
 lex.yy.c
 lex.yy.o
 y.output
-y.tab.o
-y.tab.h
 y.tab.c
+y.tab.h
+y.tab.o
