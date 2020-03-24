@@ -59,8 +59,8 @@
     	fprintf(inputFile,"%d %d %d %d\n", ope_cod, ret,op1, op2);
     }
 %}
-%union        {int nb; char * var;}
-%token        tMAIN tFIN tCONST tVOID tINT tCHAR tFLOAT tPRINTF tEQ tADD tSUB tMUL tDIV tVIRG tPTvirg tPARo tPARf tACCo tACCf tVAR tNULL tREAL tNOM tNB
+%union        {int nb; char * var;};
+%token        tMAIN tFIN tCONST tVOID tINT tCHAR tFLOAT tPRINTF tEQ tADD tSUB tMUL tDIV tVIRG tPTvirg tPARo tPARf tACCo tACCf tNULL tREAL tNOM
 %token        <nb>  tNB
 %token        <var> tVAR
 %left tADD tSUB
